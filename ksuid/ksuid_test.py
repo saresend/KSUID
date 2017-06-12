@@ -21,13 +21,16 @@ class KSUIDTests(unittest.TestCase):
 
         
     def testSort(self):
-        print("Hello!")
+
         self.assertTrue(len(self.ksList) > 0)
         print(sortKSUID(self.ksList))
 
 
 
+    def testStringFunction(self):
 
+        for val in self.ksList:
+            self.assertTrue(val.toString() == val.toString())
 
 
 

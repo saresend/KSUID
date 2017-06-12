@@ -2,7 +2,6 @@ from datetime import date
 import datetime
 import os
 import time
-# constants
 
 
 # Used instead of zero(January 1, 1970),, so that the lifespan of KSUIDs will be considerably longer
@@ -15,12 +14,14 @@ bodyLength = 16 # Number of bytes consisting of the UUID
 
 class KSUID():
 
+    """ The primary classes that encompasses ksuid functionality.
+    Does not currently take any arguments on initialization. """
+
     def __init__(self):
         payload = os.urandom(bodyLength) # generates the payload
         currTime = int(time.time())
         # Note, this code may throw an overflow exception, far into the future
         byteEncoding = int(currTime-epochTime).to_bytes(4, byteorder='big')
-        print(byteEncoding)
         self.__uid = list(byteEncoding) + list(payload)
         
         
