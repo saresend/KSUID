@@ -19,10 +19,7 @@ The ksuid library can be installed via pip:
 
 <h3> Note: currently only tested for Python 3.x </h3>
 
-
 <h2> Documentation </h2>
-
-
 Sample usage: <br>
 <code>
 ```python
