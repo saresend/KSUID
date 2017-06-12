@@ -22,16 +22,23 @@ The ksuid library can be installed via pip:
 
 <h2> Documentation </h2>
 
+
 Sample usage: <br>
 <code>
+```python
 >>> from ksuid import ksuid
 >>> x = ksuid()
->>> print(x)
-05cbd3454355fe1e1f11c85bb2c1e3e2f7c93525
+>>> print(x) 
+>>> '05cbd3454355fe1e1f11c85bb2c1e3e2f7c93525 '
 >>> x.getTimestamp()
-1497243973
->>> x.getDatetime()
-datetime.date(2017, 6, 11)
->>> x
-<ksuid.ksuid object at 0x100784a90>
+>>> 1497243973
+>>> x.getDatetime() 
+>>> datetime.date(2017, 6, 11)
+>>> x 
+>>> <ksuid.ksuid object at 0x100784a90> 
+>>> x.bytes()
+>>> b'\x05\xcb\xd7\xd0\xc6\xcb\x98i\xeb\xa0}\xfa\x0f\x87\xf1\xf1\xe8\xa1\x83\x9e'
+
+```
 </code> 
+
