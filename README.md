@@ -20,8 +20,8 @@ The ksuid library can be installed via pip:
 <h3> Note: currently only tested for Python 3.x </h3>
 
 <h2> Documentation </h2>
-Sample usage: <br>
-<code>
+Sample usage:
+
 ```python
 >>> from ksuid import ksuid
 >>> x = ksuid()
@@ -35,7 +35,6 @@ Sample usage: <br>
 >>> <ksuid.ksuid object at 0x100784a90> 
 >>> x.bytes()
 >>> b'\x05\xcb\xd7\xd0\xc6\xcb\x98i\xeb\xa0}\xfa\x0f\x87\xf1\xf1\xe8\xa1\x83\x9e'
-
 ```
-</code> 
+
 
