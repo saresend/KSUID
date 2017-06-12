@@ -24,8 +24,7 @@ The ksuid library can be installed via pip:
 <code>pip install ksuid</code>
 
 <h3> Note: currently only tested for Python 3.x </h3>
-<h2> Documentation </h2>
-Sample usage:
+<h2> Sample Usage: </h2>
 
 ```python
 >>> from ksuid import ksuid
