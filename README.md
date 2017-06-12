@@ -1,4 +1,4 @@
-<h1> Ksuid </h1>
+<h1> KSUID </h1>
 
 <h1> What is a ksuid? </h1>
 
