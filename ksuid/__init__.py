@@ -3,5 +3,4 @@ import datetime
 import os
 import time
 
-from .utils import *
-from .ksuid import *
+from ksuid.ksuid import *

@@ -22,11 +22,16 @@ The ksuid library can be installed via pip:
 
 <h2> Documentation </h2>
 
-to use, import: <br>
-<code>from ksuid import KSUID</code>
-
-To create a new ksuid, just call: <br> <code>KSUID()</code>
-
-
-To get the timestamp:
-<code> 
+Sample usage: <br>
+<code>
+>>> from ksuid import ksuid
+>>> x = ksuid()
+>>> print(x)
+05cbd3454355fe1e1f11c85bb2c1e3e2f7c93525
+>>> x.getTimestamp()
+1497243973
+>>> x.getDatetime()
+datetime.date(2017, 6, 11)
+>>> x
+<ksuid.ksuid object at 0x100784a90>
+</code> 

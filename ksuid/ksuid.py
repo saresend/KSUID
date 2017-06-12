@@ -9,10 +9,7 @@ epochTime = 1400000000
 timeStampLength = 4 # number  bytes storing the timestamp
 bodyLength = 16 # Number of bytes consisting of the UUID
 
-
-
-
-class KSUID():
+class ksuid():
 
     """ The primary classes that encompasses ksuid functionality.
     Does not currently take any arguments on initialization. """
@@ -49,15 +46,15 @@ class KSUID():
         
         return self.__uid[timeStampLength:]
 
-    def toString(self):
-        """ A function to return the UID as a sequence of numbers """
+
+    def bytes(self):
+        """ Returns the UID as raw bytes """
+
+        return bytes(self.__uid)
+
+    def __str__(self):
+        """ Creates a string representation of the Ksuid from the  bytelist """
         
-        byteString = ""
-        for val in self.__uid:
-            for dig in str(val):
-                byteString += str(ord(dig))
-        return byteString
-
-
-        
-
+        hexString = "".join(list(map(lambda x : format(x, "02x"), self.__uid)))
+        return hexString
+    
