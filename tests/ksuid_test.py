@@ -9,7 +9,7 @@ from ksuid.utils import sortKSUID
 class KSUIDTests(unittest.TestCase):
     def setUp(self):
         self.ksList = []
-        for i in range(100):
+        for i in range(1000):
             self.ksList.append(ksuid())
 
         self.ksuid1 = ksuid()
