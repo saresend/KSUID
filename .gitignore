@@ -1,6 +1,128 @@
-__pycache__
-*pyc
-dist
-*.egg-info
-*~
-*.DS_Store
+# Mac OS X system files
+.DS_Store
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-delete-this-directory.txt
+pip-log.txt
+pip-selfcheck.json
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Translations
+*.mo
+*.pot
+
+# Python and Django stuff:
+.python-version
+*.log
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+target/
+
+# PyBuild
+.pybuild/
+
+# Node and NPM
+npm*.log*
+
+# IntelliJ IDEA and alike
+.idea/
+*.iml
+
+# Visual Studio and alike
+.vscode/
+bin/
+obj/
+bower_components/
+typings/
+node_modules/
+local/
+static/
+
+# Robots and Selenium artefacts
+integration/*.html
+integration/*.xml
+*/integration-tests/*.html
+*/integration-tests/*.xml
+
+
+# Miscellaneous
+log.txt
+tmp.txt
+mytest.sh
+chromedriver.exe
+aja_testit.bat
+/.vs/Balticsys/v14/.suo
+/web.config
+/web.debug.config
+/ptvs_virtualenv_proxy.py
+/obj/Debug/web.debug.config
+/obj/Debug/web.config
+/obj/Debug/visualstudio_py_util.py
+/obj/Debug/visualstudio_py_repl.py
+/obj/Debug/visualstudio_py_debugger.py
+/obj/Debug/deployment-updated-orig-prefix.txt
+/obj/Debug/Balticsys.pyproj.FileListAbsolute.txt
+/obj/Debug/attach_server.py
+/obj/Debug/__main__.py
+/obj/Debug/__init__.py
+/Balticsys.pyproj.user
+/.vs/config/applicationhost.config
+ui_tests/dev_runs/history/
+tests_all_dev.bat
+server/web.debug.config
+server/web.config
+server/.vs
+server/py3env
+server/python3
+sp-test-data/*
+# Vagrant
+.vagrant/
+infrastructure/dev/.vagrant
+infrastructure/alpha/archives
+infrastructure/empty_deb/debs/
+
+# ctags
+tags

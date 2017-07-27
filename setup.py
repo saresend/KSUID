@@ -8,6 +8,6 @@ setup(name="ksuid",
       author="Samuel Resendez",
       author_email="samresendez1@gmail.com",
       license="MIT",
-      packages=['ksuid',],
+      packages=["ksuid"],
       zip_safe=False
       )
