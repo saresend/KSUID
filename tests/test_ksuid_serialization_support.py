@@ -33,5 +33,3 @@ def test_successfully_converts_to_bytes_and_vice_versa():
     uid2 = ksuid.fromBytes(serialized)
     assert str(uid1) == str(uid2)
     assert uid1.bytes() == uid2.bytes()
-
-

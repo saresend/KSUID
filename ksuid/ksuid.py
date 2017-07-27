@@ -75,4 +75,3 @@ class ksuid():
         """ Creates a string representation of the Ksuid from the  bytelist """
         hexString = "".join(list(map(lambda x: format(x, "02x"), self.__uid)))
         return hexString
-
