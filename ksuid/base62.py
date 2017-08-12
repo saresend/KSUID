@@ -5,7 +5,6 @@ base62
 
 Originated from http://blog.suminb.com/archives/558
 """
-
 __title__ = "base62"
 __author__ = "Sumin Byeon"
 __email__ = "suminb@gmail.com"
@@ -109,6 +108,6 @@ def _value(ch):
 def _check_bytes_type(s):
     """Checks if the input is in an appropriate type."""
 
-    if not isinstance(s, bytes):
+    if (not isinstance(s, bytes)) and (not isinstance(s, bytearray)):
         msg = "expected bytes-like object, not %s" % s.__class__.__name__
         raise TypeError(msg)

@@ -9,8 +9,17 @@ TESTDIR = tests
 MODULE_NAME = ksuid
 DEV_CONFIG_FILE = ./conf/reqlog-dev.conf
 
+SHELL=C:/Windows/System32/cmd.exe
+VIRTUALENV_APP_P27 = d:/Python27/python.exe -m virtualenv
+
+.PHONY: environ
 environ: clean requirements-dev.txt
 	virtualenv $(ENV)
+	$(PIP) install -r requirements-dev.txt
+	
+.PHONY: environ_p27
+environ_p27: clean requirements-dev.txt
+	$(VIRTUALENV_APP_P27) $(ENV)
 	$(PIP) install -r requirements-dev.txt
 
 .PHONY: help
@@ -44,3 +53,4 @@ clean:
 	if exist $(ENV) rd $(ENV) /q /s
 	if exist reqlog.egg-info rd reqlog.egg-info /q /s
 	if exist .coverage del .coverage
+	del /S *.pyc
