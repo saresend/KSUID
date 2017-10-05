@@ -3,4 +3,8 @@ import datetime
 import os
 import time
 
-from ksuid.ksuid import *
+try:
+    from ksuid.ksuid import *
+except ImportError:
+    from .ksuid import *
+

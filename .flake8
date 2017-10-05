@@ -1,0 +1,23 @@
+[flake8]
+exclude = .idea, __pycache__, log, __init__.py, env
+max-line-length = 150
+max-complexity = 10
+filename = *.py
+format = default
+import-order-style = google
+inline-quotes = "
+ignore =
+	# E221 multiple spaces before operator
+	E221,
+	# whitespace before ':'
+	E203,
+	# whitespace before ')'
+	E202,
+	# multiple spaces after ','
+	E241,
+	# unexpected spaces around keyword / parameter equals
+	E251,
+	#comparison to True should be 'if cond is True:' or 'if cond (it's needed for SQLAlchemy)
+	E712
+
+
