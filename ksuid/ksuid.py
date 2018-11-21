@@ -6,8 +6,8 @@ import time
 from .base62 import decodebytes, encodebytes
 from .utils import int_from_bytes, int_to_bytes
 
-
-# Used instead of zero(January 1, 1970), so that the lifespan of KSUIDs will be considerably longer
+# Used instead of zero(January 1, 1970), so that the lifespan of KSUIDs
+# will be considerably longer
 EPOCH_TIME = 1400000000
 
 TIME_STAMP_LENGTH = 4  # number  bytes storing the timestamp
@@ -16,11 +16,16 @@ BODY_LENGTH = 16  # Number of bytes consisting of the UUID
 
 class ksuid():
     """ The primary classes that encompasses ksuid functionality.
-    Does not currently take any arguments on initialization. """
+    When given optional timestamp argument, the ksuid will be generated
+    with the given timestamp. Else the current time is used.
+    """
 
-    def __init__(self):
+    def __init__(self, timestamp=None):
         payload = os.urandom(BODY_LENGTH)  # generates the payload
-        currTime = int(time.time())
+        if timestamp is None:
+            currTime = int(time.time())
+        else:
+            currTime = timestamp
         # Note, this code may throw an overflow exception, far into the future
         byteEncoding = int_to_bytes(int(currTime - EPOCH_TIME), 4,  "big")
 
@@ -36,7 +41,8 @@ class ksuid():
     def getTimestamp(self):
         """ Returns the value of the timestamp, as a unix timestamp"""
 
-        unixTime = int_from_bytes(self.__uid[:TIME_STAMP_LENGTH], byteorder="big")
+        unixTime = int_from_bytes(
+            self.__uid[:TIME_STAMP_LENGTH], byteorder="big")
         return unixTime + EPOCH_TIME
 
     # Returns the payload without the unix timestamp
